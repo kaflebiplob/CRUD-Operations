@@ -7,7 +7,7 @@ if (isset($_POST["btn"])) {
     $description = mysqli_real_escape_string($connection, $_POST["desc"]);
 
     $sql = "INSERT INTO books (title, author,type, description) VALUES ('$title','$author','$type','$description')";
-   $status =  mysqli_query($connection, $sql);
+    $status =  mysqli_query($connection, $sql);
     if ($status) {
         echo "record inserted";
     } else {
@@ -19,15 +19,13 @@ if (isset($_POST["edit"])) {
     $author = mysqli_real_escape_string($connection, $_POST["author"]);
     $type = mysqli_real_escape_string($connection, $_POST["type"]);
     $description = mysqli_real_escape_string($connection, $_POST["desc"]);
-    $id = mysqli_real_escape_string($conn, $_POST["id"]);
+    $id = mysqli_real_escape_string($connection, $_POST["id"]);
 
-$sql = "UPDATE books SET title = '$title', author='$author', type = '$type',description= '$description' WHERE id =$id ";
-   $status =  mysqli_query($connection, $sql);
+    $sql = "UPDATE books SET title = '$title', author='$author', type = '$type',description= '$description' WHERE id = '$id' ";
+    $status =  mysqli_query($connection, $sql);
     if ($status) {
         echo "record updated";
     } else {
         die("sorry");
     }
 }
-?>
-
