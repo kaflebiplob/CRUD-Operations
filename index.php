@@ -41,7 +41,7 @@
                         <td> <?php echo $row['type']; ?></td>
                         <td>
                             <a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-info">read more</a>
-                            <a href="" class="btn btn-warning">edit</a>
+                            <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">edit</a>
                             <a href="" class="btn btn-danger">delete</a>
 
                         </td>
