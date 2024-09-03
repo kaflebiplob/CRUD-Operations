@@ -1,12 +1,13 @@
 <?php
-$dbHost = "localhost";
-$dbUser ="root";
+$dbhostName = "localhost";
+$dbUser = "root";
 $dbPass = "";
 $dbName = "crud";
-
-
-$connection = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
+$connection = mysqli_connect($dbhostName,$dbUser,$dbPass,$dbName);
 if (!$connection) {
     die("Somenthing went Wrong");
+}
+else{
+
 }
 ?>
