@@ -11,7 +11,7 @@ if (isset($_POST["btn"])) {
     if ($status) {
         echo "record inserted";
     } else {
-        die("fuck you");
+        die("sorry");
     }
 }
 ?>

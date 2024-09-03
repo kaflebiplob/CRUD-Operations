@@ -23,7 +23,7 @@
                     <th>Title</th>
                     <th>Author</th>
                     <th>Type</th>
-                    <th>Description</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,17 +31,16 @@
                 include("connectDatabase.php");
                 $sql = "SELECT * FROM books";
                 $result = mysqli_query($connection, $sql);
-               
-                while ( $row = mysqli_fetch_array($result)) {
+
+                while ($row = mysqli_fetch_array($result)) {
                 ?>
                     <tr>
-                        <td> <?php echo $row["id"]; ?></td>
-                        <td> <?php echo $row["title"]; ?></td>
-                        <td> <?php echo $row["author"]; ?></td>
-                        <td> <?php echo $row["type"]; ?></td>
-                        <td> <?php echo $row["description"]; ?></td>
+                        <td> <?php echo $row['id']; ?></td>
+                        <td> <?php echo $row['title']; ?></td>
+                        <td> <?php echo $row['author']; ?></td>
+                        <td> <?php echo $row['type']; ?></td>
                         <td>
-                            <a href="" class="btn btn-info">read more</a>
+                            <a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-info">read more</a>
                             <a href="" class="btn btn-warning">edit</a>
                             <a href="" class="btn btn-danger">delete</a>
 
