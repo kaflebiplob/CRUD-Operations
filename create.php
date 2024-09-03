@@ -11,33 +11,33 @@
 <body>
     <div class="container">
 
-    <form action="process.php" method="post">
-        <div class="form-element my-4">
-            <input type="text" class="form-control" name="title" placeholder="Enter books">
-        </div>
-        <div class="form-element my-4">
-            <input type="text" class="form-control" name="author" placeholder="Enter Author name">
-        </div>  
-        <div class="form-element my-4">
-            <select name="type" class="form-control" id="">
-                <option value="">Select Book Type</option>
-                <option value="">Adventure</option>
-                <option value="">ScFi</option>
-                <option value="">Thriller</option>
-                <option value="">Horror</option> 
-                <option value="">Love Story</option> 
+        <form action="process.php" method="post">
+            <div class="form-element my-4">
+                <input type="text" class="form-control" name="title" placeholder="Enter books">
+            </div>
+            <div class="form-element my-4">
+                <input type="text" class="form-control" name="author" placeholder="Enter Author name">
+            </div>
+            <div class="form-element my-4">
+                <select name="type" class="form-control" id="">
+                    <option value="">Select Book Type</option>
+                    <option value="">Adventure</option>
+                    <option value="">ScFi</option>
+                    <option value="">Thriller</option>
+                    <option value="">Horror</option>
+                    <option value="">Love Story</option>
 
 
-            </select>
-        </div>
-        <div class="form-element my-4">
-            <input type="text" class="form-control" name="desc" placeholder="Enter description">
-        </div>
-        <div class="form-element my-4">
-            <input type="submit" class="btn btn-success" name="btn" value="Add Book">
-        </div>
-        
-    </form>
+                </select>
+            </div>
+            <div class="form-element my-4">
+                <input type="text" class="form-control" name="desc" placeholder="Enter description">
+            </div>
+            <div class="form-element my-4">
+                <input type="submit" class="btn btn-success" name="btn" value="Add Book">
+            </div>
+
+        </form>
     </div>
 
 </body>

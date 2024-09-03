@@ -9,9 +9,11 @@ if (isset($_POST["btn"])) {
     $sql = "INSERT INTO books (title, author,type, description) VALUES ('$title','$author','$type','$description')";
     $status =  mysqli_query($connection, $sql);
     if ($status) {
-        echo "record inserted";
+        session_start();
+        $_SESSION["btn"] = "Book Added succesfully";
+        header("Location:index.php");
     } else {
-        die("sorry");
+        die("Something went wrong");
     }
 }
 if (isset($_POST["edit"])) {
@@ -24,8 +26,10 @@ if (isset($_POST["edit"])) {
     $sql = "UPDATE books SET title = '$title', author='$author', type = '$type',description= '$description' WHERE id = '$id' ";
     $status =  mysqli_query($connection, $sql);
     if ($status) {
-        echo "record updated";
+        session_start();
+        $_SESSION['edit'] = "Book Edited succesfully";
+        header("Location: index.php");
     } else {
-        die("sorry");
+        die("Something went wrong");
     }
 }

@@ -16,6 +16,43 @@
                 <a href="create.php" class="btn btn-primary">Add Book</a>
             </div>
         </header>
+        <?php
+        session_start();
+        if (isset($_SESSION["btn"])) {
+        ?>
+            <div class="alert alert-success">
+                <?php
+                echo $_SESSION["btn"];
+                ?>
+            </div>
+        <?php
+            unset($_SESSION["btn"]);
+        }
+        ?>
+        <?php
+        if (isset($_SESSION["edit"])) {
+        ?>
+            <div class="alert alert-success">
+                <?php
+                echo $_SESSION["edit"];
+                ?>
+            </div>
+        <?php
+            unset($_SESSION["edit"]);
+        }
+        ?>
+        <?php
+        if (isset($_SESSION["delete"])) {
+        ?>
+            <div class="alert alert-success">
+                <?php
+                echo $_SESSION["delete"];
+                ?>
+            </div>
+        <?php
+            unset($_SESSION["delete"]);
+        }
+        ?>
         <table class="table table-bordered">
             <thead>
                 <tr>
